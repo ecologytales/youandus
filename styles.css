@@ -1,0 +1,225 @@
+/*General reset*/
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #111;
+    background-color: white;
+    height: 100%;
+    overflow-y: auto;
+}
+
+h1{
+    font-family: "Libre Baserville";
+    font-size: 20pt;
+    font-style: italic;
+    text-align: 50;
+    margin: auto;
+    padding: 30px;
+}
+
+
+h2{
+    font-family: "Libre Baserville";
+    font-style: italic;
+    padding-top: 100px;
+}
+
+h3{
+    font-size: 200pt;
+    margin: 0;
+}
+
+h4{
+    color: #7b7b7b;
+    font-size: 10pt;
+    padding-top: 0px;
+}
+
+p1{
+    color: black;
+    font-size: 15pt;
+}
+
+p2{
+    font-size: 25pt;
+    color: #000;
+
+}
+
+p3{
+    text-align: right;
+    font-size: 20pt;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+/*Font*/
+.libre-baskerville-regular-italic {
+    font-family: "Libre Baskerville", serif;
+  }
+
+
+/* Hero Grid Layout */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Equal 3 columns */
+    height: 50vh; /* 50% of viewport height */
+    border-top: 6px double #eae7e7; /* Border on top */
+    border-bottom: 6px double #eae7e7; /* Border on bottom */
+}
+
+.hero-grid div {
+    border-right: 1px solid #eae7e7; /* Add border between columns */
+}
+
+.hero-grid div:last-child {
+    border-right: none; /* Remove border after the last column */
+}
+
+
+.hero-box:hover {
+    background-color: #e0e0e0; /* Highlight effect on hover */
+}
+
+/* Subtitle styling */
+.subtitle {
+    position: absolute; /* Position relative to the hero box */
+    bottom: 130px; /* Adjust the placement */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth appearance */
+    font-size: 1rem;
+    color: #7b7b7b;
+}
+
+/* Show subtitle on hover */
+.hero-box:hover .subtitle {
+    opacity: 1; /* Fully visible on hover */
+}
+
+
+.hero-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-weight: normal;
+    color: #111;
+    cursor: cell;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.hero-box:nth-child(1) { background-color: #fff; } 
+.hero-box:nth-child(2) { background-color: #fff; } 
+.hero-box:nth-child(3) { background-color: #fff; } 
+
+
+/* Hover Images Container */
+#hover-images-container img {
+    position: absolute;
+    width: 200px; /* Default image size */
+    height: auto;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.6s, transform 0.6s ease-in-out;
+    z-index: 10;
+}
+
+/* Specific Image Positions */
+img.image-1 { 
+    bottom: 60px; /* Fixed from bottom */
+    left: 40px;   /* Fixed from left */
+}
+
+img.image-2 { 
+    bottom: 20px; /* Fixed from bottom */
+    right: 20px;  /* Fixed from right */
+}
+
+img.image-3 { 
+    top: 170px;  /* Fixed from top */
+    left: 250px; /* Fixed from left */
+}
+
+img.image-4 { 
+    top: 150px;   /* Fixed from top */
+    right: 100px; /* Fixed from right */
+}
+/* Add on hover */
+.hero-box:hover ~ #hover-images-container img {
+    opacity: 1;
+}
+
+
+.hero-grid-container2{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 10px;
+    padding-top: 15px;
+}
+
+.hero-grid2{
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-grid2 img{
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.hero-grid2:hover img{
+    transform: scale(1.3);
+
+}
+
+.hero-grid2:hover .overlay{
+    transform: translateY(0);
+}
+
+
+.video-lyric-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container{
+    flex: 4;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 40%; /*16:9 aspect*/
+    margin-bottom:0; /*center horizontally*/
+}
+
+.video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 70%;
+    height: 70%;
+    border: none;
+}
+
+.lyric-container{
+    flex: 1.5;
+    justify-content: left;
+    align-items: left;
+    padding-top: 0 20px;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
