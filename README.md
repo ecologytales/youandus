@@ -1,4 +1,4 @@
-A first hands-on experience with HTML, CSS and JS. This project is based on my personal interest and for learning purpose. 
+A first hands-on experience with HTML, CSS and JS. This project is based on my personal interest and for learning purposes. My (future) partner is my inspiration, so all thanks to her.
 
 Improvements pending:
 1. The image hover pop-ups of "Love, Build, Grow" changes position depending on the browser's window size and hides the subtitle. Make it anchored and resize the images depending on the viewport size.
